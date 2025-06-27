@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blendo Costa | Desenvolvedor Front-end</title>
+
+    <link rel="stylesheet" href="/styles/styleHome.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="bg-black text-white">
+    <!-- Header com imagem de fundo e efeito shimmer -->
+    <header
+      class="relative h-[80vh] flex items-center justify-center text-center px-6 overflow-hidden"
+    >
+      <!-- Imagem de fundo -->
+      <img
+        src="/asstes/imgs/banner-1.jpg"
+        alt="Fundo tecnologia"
+        class="absolute inset-0 w-full h-full object-cover brightness-50"
+        loading="lazy"
+      />
+      <!-- Efeito shimmer dourado -->
+      <div class="bg-animated"></div>
+      <div class="relative z-20">
+        <h1 class="text-5xl font-extrabold text-yellow-400 mb-4">
+          Blendo Costa
+        </h1>
+        <p class="text-lg text-gray-300 max-w-xl mx-auto">
+          Desenvolvedor Front-end que transforma ideias em experiências digitais
+          de impacto.
+        </p>
+        <a
+          href="#contato"
+          class="mt-6 inline-block px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded-lg"
+          >Fale comigo</a
+        >
+      </div>
+    </header>
+
+    <!-- Sobre Mim -->
+    <section class="py-20 px-6 max-w-6xl mx-auto fade-in">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <img
+          src="/asstes/imgs/perfil.jpg"
+          class="w-full md:w-1/3 rounded-lg shadow-lg"
+          alt="Blendo Costa"
+        />
+        <div class="md:w-2/3">
+          <h2 class="text-3xl font-bold text-yellow-400 mb-4">Sobre Mim</h2>
+          <p
+            id="sobreTexto"
+            class="text-gray-300 text-lg leading-relaxed whitespace-pre-line"
+          ></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section class="bg-gray-900 py-20 px-6 fade-in">
+      <div class="max-w-6xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-yellow-400 mb-10">
+          Meus Projetos em Destaque
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-black border border-gray-700 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-2 text-yellow-300">
+              Landing Page Estética
+            </h3>
+            <p class="text-gray-400 mb-4">
+              Alta conversão para clínicas de estética com CTA forte e
+              identidade marcante.
+            </p>
+            <a href="#" class="text-yellow-500 hover:underline">Ver Projeto</a>
+          </div>
+          <div class="bg-black border border-gray-700 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-2 text-yellow-300">
+              Site para Hamburgueria
+            </h3>
+            <p class="text-gray-400 mb-4">
+              Visual apetitoso com integração a pedidos por WhatsApp e tráfego
+              pago.
+            </p>
+            <a href="#" class="text-yellow-500 hover:underline">Ver Projeto</a>
+          </div>
+          <div class="bg-black border border-gray-700 p-6 rounded-lg shadow-lg">
+            <h3 class="text-xl font-semibold mb-2 text-yellow-300">
+              Portfólio Profissional
+            </h3>
+            <p class="text-gray-400 mb-4">
+              Sites de apresentação com identidade visual forte e autoridade no
+              design.
+            </p>
+            <a href="#" class="text-yellow-500 hover:underline">Ver Projeto</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-black py-20 px-6 fade-in">
+      <div class="max-w-xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-yellow-400 mb-6">
+          Entre em Contato
+        </h2>
+        <form id="form-whatsapp" class="space-y-4">
+          <input
+            type="text"
+            id="nome"
+            placeholder="Seu nome"
+            required
+            class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-yellow-400"
+          />
+          <input
+            type="text"
+            id="whatsapp"
+            placeholder="WhatsApp com DDD"
+            required
+            class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-yellow-400"
+          />
+          <select
+            id="servico"
+            required
+            class="w-full px-4 py-3 rounded bg-gray-800 text-white border border-gray-700 focus:outline-none focus:border-yellow-400"
+          >
+            <option value="" disabled selected>
+              Qual serviço você precisa?
+            </option>
+            <option>Site Institucional</option>
+            <option>Landing Page</option>
+            <option>Página de Vendas</option>
+            <option>Identidade Visual</option>
+            <option>Tráfego Pago</option>
+          </select>
+          <button
+            type="submit"
+            class="w-full px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-semibold rounded"
+          >
+            Fale comigo no WhatsApp
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Tecnologias -->
+    <section class="max-w-6xl mx-auto py-16 px-6">
+      <h2 class="text-3xl font-bold text-yellow-400 mb-12 text-center">
+        Tecnologias que trabalho
+      </h2>
+      <div
+        class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-8 justify-items-center"
+      >
+        <div class="tech-item floaty">
+          <img
+            src="/asstes/imgs/html5.png"
+            alt="HTML5"
+            class="w-16 h-16 mx-auto"
+            title="HTML5"
+          />
+        </div>
+        <div class="tech-item floaty" style="animation-delay: 0.3s">
+          <img
+            src="/asstes/imgs/css3.png"
+            alt="CSS3"
+            class="w-16 h-16 mx-auto"
+            title="CSS3"
+          />
+        </div>
+        <div class="tech-item floaty" style="animation-delay: 0.6s">
+          <img
+            src="/asstes/imgs/javascript.png"
+            alt="JavaScript"
+            class="w-16 h-16 mx-auto"
+            title="JavaScript"
+          />
+        </div>
+        <div class="tech-item floaty" style="animation-delay: 0.9s">
+          <img
+            src="/asstes/imgs/react.png"
+            alt="React"
+            class="w-16 h-16 mx-auto"
+            title="React"
+          />
+        </div>
+        <div class="tech-item floaty" style="animation-delay: 1.2s">
+          <img
+            src="/asstes/imgs/nodejs.png"
+            alt="Node.js"
+            class="w-16 h-16 mx-auto"
+            title="Node.js"
+          />
+        </div>
+        <div class="tech-item floaty" style="animation-delay: 1.5s">
+          <img
+            src="/asstes/imgs/tailwindcss.png"
+            alt="Tailwind CSS"
+            class="w-16 h-16 mx-auto"
+            title="Tailwind CSS"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-center text-sm text-gray-500 py-8">
+      <div class="mb-4 social-icons">
+        <a
+          href="https://www.linkedin.com/in/blendocosta/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a
+          href="https://github.com/blendocosta"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://instagram.com/blendocosta"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://twitter.com/blendocosta"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+      <p>© 2025 Blendo Costa. Todos os direitos reservados.</p>
+      <p>Desenvolvido com 💻 e dedicação.</p>
+    </footer>
+
+    <script src="/scripts/scriptHome.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+body {
+      font-family: "Inter", sans-serif;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .bg-animated {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        rgba(255, 215, 0, 0.05) 0%,
+        rgba(255, 215, 0, 0.2) 50%,
+        rgba(255, 215, 0, 0.05) 100%
+      );
+      background-size: 400% 400%;
+      animation: shimmer 10s ease-in-out infinite;
+      z-index: 10; /* Sobre a imagem */
+      pointer-events: none;
+    }
+    @keyframes shimmer {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    /* Animação flutuar */
+    @keyframes floaty {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
+    .floaty {
+      animation: floaty 4s ease-in-out infinite;
+    }
+    /* Borda dourada nos itens */
+    .tech-item {
+      border: 2px solid #ffd700; /* dourado */
+      border-radius: 12px;
+      padding: 16px;
+      background-color: rgba(255, 215, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .tech-item:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 12px #ffd700;
+    }
+    /* Footer social icons */
+    .social-icons a {
+      margin: 0 10px;
+      color: #ffd700;
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #fff;
+    }
